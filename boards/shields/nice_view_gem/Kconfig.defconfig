@@ -35,6 +35,14 @@ config NICE_VIEW_GEM_ANIMATION_MS
     int "Animation length in milliseconds"
     default 960
 
+config NICE_VIEW_GEM_CONN_TICK_MS
+    int "Connection widget uptime refresh interval in milliseconds"
+    default 60000
+    help
+      Period at which the uptime row in the connection widget refreshes.
+      Higher values reduce battery usage; lower values give a more live feel.
+      The timer pauses automatically when the display blanks during idle.
+
 config NICE_VIEW_WIDGET_STATUS
     select LV_USE_LABEL
     select LV_USE_IMG
